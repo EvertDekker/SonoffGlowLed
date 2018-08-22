@@ -1,5 +1,5 @@
 /*
-    Gerneric Esp8285 Module: CPU Frequency: 80MHz
+    Generic Esp8285 Module: CPU Frequency: 80MHz
     Flash Size: 1M (64K SPIFFS)
 */
 
@@ -145,15 +145,15 @@ void loop()
   {
     analogWrite(TOUCHLED, brightness);
     brightness = brightness + fadeAmount;     // change the brightness for next time through the loop:
-    if (brightness <= 0 || brightness >= 255)   // reverse the direction of the fading at the ends of the fade:
+    if (brightness <= 0 || brightness >= 1020)   // reverse the direction of the fading at the ends of the fade:
     {
       fadeAmount = -fadeAmount;
     }
-    delay(30); // wait for 30 milliseconds to see the dimming effect
+    delay(8); // wait for 8 milliseconds to see the dimming effect
   }
   else
   {
-    analogWrite(TOUCHLED, 255);
+    analogWrite(TOUCHLED, 1023);
   }
 
 
